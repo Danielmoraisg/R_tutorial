@@ -13,7 +13,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 We will be using [R version 4.0.0](https://www.r-project.org) for this tutorial, feel free to copy and mess with the code snippets to help your understanding.
 
-I recommend you to download and install [RStudio](https://rstudio.com) to help ypu visualize and edit your codes.
+I recommend you to download and install [RStudio](https://rstudio.com) to help you visualize and edit your codes.
+
+**Important**: Your best friend while learning to code is [GOOGLE](https://www.google.com) 
+
 
 # Basic concepts
 
@@ -24,16 +27,30 @@ You can just type any number and R will give you the same number
 ```{r}
 1
 ```
-## Strings
 
-In order to show a string you must use 'single' or "double" quotes
+numbers can be Numeric, Integer or complex
+
+### Numeric
+
+These are simple numbers with decimal. This is the default mode for numbers
 
 ```{r}
-"HI"
-
-'Hello'
+print(class(1.2))
 ```
 
+### Integer 
+to get a non decimal (integer) value you generally need to use the function as.integer
+
+```{r}
+print(class(as.integer(1)))
+```
+
+### Complex 
+to get a non decimal (integer) value you generally need to use the function as.integer
+
+```{r}
+print(class((10 + 3i)))
+```
 
 ## Arithmetic
 
@@ -64,6 +81,16 @@ Example = c('10==20','10!=20','10>20','10<20','10<=20','10>=20')
 Result = c(10==20,10!=20,10>20,10<20,10<=20,10>=20)
 df = data.frame(Name,Operator,Example,Result)
 knitr::kable(df, caption = 'Cheat sheet for logical operations in R')
+```
+
+## Strings
+
+In order to show a string you must use 'single' or "double" quotes.
+
+```{r}
+"HI"
+
+'Hello'
 ```
 
 ## 'print' function
@@ -102,7 +129,7 @@ print(a)
 
 # Vectors
 
-A vector is a list of items
+A vector is a list of items.
 
 ```{r}
 a = c(1,2,3)
@@ -175,3 +202,13 @@ for (variable in c(1,2,3)){
 }
 ```
 
+# Functions
+
+You can create your own functions to help your work. In the following code I'll be creating a function to sum two numbers
+
+```{r}
+adding = function(x,y){
+  return(x+y)
+}
+print(adding(10,12))
+```
