@@ -1797,7 +1797,7 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 </div>
 <div id="complex" class="section level3">
 <h3>Complex</h3>
-<p>to get a non decimal (integer) value you generally need to use the function as.integer</p>
+<p>You can create a complex number simply writing it</p>
 <pre class="r"><code>print(class((10 + 3i)))</code></pre>
 <pre><code>## [1] &quot;complex&quot;</code></pre>
 </div>
@@ -2018,8 +2018,7 @@ while (variable &lt; 10){
 <div id="loop-for" class="section level2">
 <h2>Loop ‘for’</h2>
 <p>This code runs until ‘variable’ reaches the end of the your vector, in this case 3. Note that ‘variable’ changes its value every time the code is executed</p>
-<pre class="r"><code>variable = 0
-for (variable in c(1,2,3)){
+<pre class="r"><code>for (variable in c(1,2,3)){
   print(variable)
 }</code></pre>
 <pre><code>## [1] 1
