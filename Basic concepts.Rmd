@@ -46,7 +46,8 @@ print(class(as.integer(1)))
 ```
 
 ### Complex 
-to get a non decimal (integer) value you generally need to use the function as.integer
+
+You can create a complex number simply writing it
 
 ```{r}
 print(class((10 + 3i)))
